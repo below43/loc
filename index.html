@@ -1,9 +1,9 @@
 <html>
 <title>Your geolocation</title>
 <body onload="getLocation()">
-	<div id="demo"></div>
+	<pre id="loc">Determining your location...</pre>
 	<script>
-		var x = document.getElementById("demo");
+		var x = document.getElementById("loc");
 		function getLocation()
 		{
 			if (navigator.geolocation)
@@ -17,7 +17,7 @@
 		function showPosition(position)
 		{
 			x.innerHTML = "Latitude: " + position.coords.latitude +
-				"<br>Longitude: " + position.coords.longitude;
+				"\r\nLongitude: " + position.coords.longitude;
 		}
 	</script>
 </body>
